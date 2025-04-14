@@ -1,0 +1,149 @@
+/* Reduce height of the counter/intro section */
+.ftco-counter.ftco-intro {
+    padding-top: 30px; /* Reduce top padding */
+    padding-bottom: 30px; /* Reduce bottom padding */
+}
+
+/* Reduce height of regular sections */
+.ftco-section {
+    padding-top: 40px; /* Reduce top padding */
+    padding-bottom: 40px; /* Reduce bottom padding */
+}
+
+/* Reduce height of the light background section */
+.ftco-section.bg-light {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Reduce height of the gallery section */
+.ftco-gallery {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Reduce height of the footer section */
+.ftco-footer.ftco-section {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* if you want to also change the height of the hero wrap*/
+.hero-wrap{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* aother */
+.hero-wrap {
+    padding-top: 150px; /* Adjust this value */
+    padding-bottom: 150px; /* Adjust this value */
+    /* If you want to set a fixed height instead of padding, use: */
+    /* height: 400px; */ /* Adjust this value as needed */
+}
+
+.hero-wrap .slider-text {
+    /* If you want to reduce the vertical spacing of the text inside:*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-wrap h1{
+    font-size: 2.5em; /* reduce the font size if needed */
+}
+
+.hero-wrap p{
+    font-size: 1em; /* reduce the font size if needed */
+}
+
+
+/* container */
+.hero-wrap .container {
+    padding-top: 30px; /* Adjust this value */
+    padding-bottom: 30px; /* Adjust this value */
+}
+
+.hero-wrap .container .slider-text {
+    padding-top: 20px; /* Adjust this value */
+    padding-bottom: 20px; /* Adjust this value */
+}
+
+.hero-wrap .container h1 {
+    font-size: 2.5em; /* Adjust this value */
+    margin-bottom: 15px; /* Adjust this value */
+    line-height: 1.2; /*Adjust this value*/
+}
+
+.hero-wrap .container p {
+    margin-bottom: 10px; /* Adjust this value */
+}
+
+.hero-wrap .container .btn {
+    padding: 8px 20px; /* Adjust button padding */
+    font-size: 0.9em; /* Adjust button font size */
+}
+
+
+/* footer updates */
+
+.ftco-footer.ftco-section {
+    padding-top: 40px; /* Reduced padding-top */
+    padding-bottom: 20px; /* Reduced padding-bottom */
+}
+
+.ftco-footer-widget {
+    margin-bottom: 20px; /* Reduced margin-bottom */
+}
+
+.ftco-footer-social {
+    margin-top: 20px; /* Reduced margin-top */
+    padding-left: 0; /* Remove default padding */
+}
+
+.ftco-footer-social li {
+    display: inline-block; /* Display social icons in a row */
+    margin-right: 10px; /* Add spacing between icons */
+}
+
+.ftco-footer-social li:last-child {
+    margin-right: 0; /* Remove margin from the last icon */
+}
+
+.ftco-heading-2 {
+    font-size: 1.3em; /* Reduced heading font size */
+    margin-bottom: 15px; /* Reduced margin-bottom */
+}
+
+.ftco-footer-widget ul li {
+    margin-bottom: 5px; /* Reduced margin between list items */
+}
+
+.ftco-footer-widget ul li a {
+    padding-top: 5px; /* Reduced padding */
+    padding-bottom: 5px; /* Reduced padding */
+}
+
+/* picha */
+/* .idara-image {
+    width: 60px; 
+    height: 60px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+} */
+
+.idara-image {
+    width: 60px; /* Badilisha upana wa picha */
+    height: 60px; /* Badilisha urefu wa picha */
+    object-fit: cover; /* Hakikisha picha inafaa ndani ya vipimo */
+    border-radius: 50%; /* Fanya picha iwe mviringo (hiari) */
+}
+
+
+
+/* picha kubwa */
+.mt-3 img {
+    max-width: 70%; /* Badilisha asilimia kulingana na mahitaji yako */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* ongeza margin kidogo juu na chini ili kupata nafasi */
+}
