@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw">
   <head>
-    <title>IKHLA</title>
+    <title>Kuhusu IKHLA</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -17,14 +17,9 @@
       href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700"
       rel="stylesheet"
     />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+    <!-- In your <head> -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
@@ -59,147 +54,203 @@
   </head>
 
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
-      id="ftco-navbar"
-    >
-      <div class="container">
-        <img
-          src="images_ukuem/IKHLA_Logo_Latest.png"
-          alt="Ikhla Logo"
-          style="height: 110px; width: 70px;"
-          class="d-inline-block align-top"
-        />
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="oi oi-menu"></span> Menu
+
+    <!-- Hero Section with Sliding Images, Text Overlay, and Video Button -->
+    <style>
+        .hero-slider {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        }
+        .hero-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        }
+        .hero-slide.active {
+        opacity: 1;
+        z-index: 1;
+        }
+        .hero-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+        text-align: center;
+        z-index: 2;
+        padding: 0 15px;
+        }
+        .hero-overlay a {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: 2px solid white;
+        color: white;
+        text-decoration: none;
+        }
+        .slider-nav {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        }
+        .slider-arrow {
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        }
+        nav.navbar {
+        z-index: 1000;
+        position: relative;
+        }
+        .navbar-nav .nav-link {
+        font-size: 1.15rem;
+        font-weight: 600;
+        }
+    </style>   
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+        <img src="images_ukuem/IKHLA_Logo_Latest.png" alt="Ikhla Logo" style="height: 110px; width: 70px;" class="d-inline-block align-top" />
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
         </button>
-
         <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a href="index.html" class="nav-link">Nyumbani</a>
-            </li>
-            <li class="nav-item"><a class="nav-link">Changia</a></li>
-            <li class="nav-item">
-              <a href="#kuhusu" class="nav-link">Kuhusu</a>
-            </li>
-            <li class="nav-item">
-              <a href="#sehemu" class="nav-link">Sehemu</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a href="index.html" class="nav-link">Nyumbani</a></li>
+            <li class="nav-item "><a class="nav-link">Changia</a></li>
+            <li class="nav-item"><a href="#kuhusu" class="nav-link">Kuhusu</a></li>
+            <li class="nav-item"><a href="#sehemu" class="nav-link">Mahali</a></li>
+            </ul>
         </div>
-      </div>
+        </div>
     </nav>
-
-    <div
-      class="hero-wrap"
-      style="background-image: url('images_ukuem/coverpic1.jpg')"
-      data-stellar-background-ratio="0.5"
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div
-          class="row no-gutters slider-text align-items-center justify-content-center"
-          data-scrollax-parent="true"
-        >
-          <div
-            class="col-md-7 ftco-animate text-center"
-            data-scrollax=" properties: { translateY: '70%' }"
-          >
-            <h1
-              class="mb-4"
-              data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
-            >
-              Ibn Khaldun Learning Academy
-            </h1>
-
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-              <a
-                href="https://www.youtube.com/watch?v=nh-g0URjoqw"
-                class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"
-                ><span class="icon-play mr-2"></span>Watch Video</a
-              >
-            </p>
-          </div>
+    
+    <div class="hero-slider">
+        <!-- First slide with logo text and video -->
+        <div class="hero-slide active" style="background-image: url('images_ukuem/ikhla1.jpg');">
+        <div class="hero-overlay">
+            Ibn Khaldun Learning Academy<br>
+            <a href="https://www.youtube.com/watch?v=nh-g0URjoqw" class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo">
+            <span class="icon-play mr-2"></span>Watch Video
+            </a>
         </div>
-      </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('images_ukuem/ikhla3.jpg');">
+        <div class="hero-overlay">Dumisha uwiano wa akili, mwili, na roho.</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('images_ukuem/ikhla4.jpg');">
+        <div class="hero-overlay">Ushirikishwaji ndio nguvu yetu. Daima jitahidi kuwa bora zaidi.</div>
+        </div>
+        <div class="hero-slide" style="background-image: url('images_ukuem/ikhla7.jpg');">
+        <div class="hero-overlay">Fanya dunia iwe mahali bora pa kuishi.</div>
+        </div>
+        <div class="slider-nav">
+        <button class="slider-arrow" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slider-arrow" onclick="changeSlide(1)">&#10095;</button>
+        </div>
     </div>
 
-    <section class="ftco-section">
-      <div class="container" id="kuhusu">
-        <div class="text">
-          <h3 class="mb-4">Kuhusu IKHLA</h3>
-        </div>
 
-        <section class="about">
-          <div class="row">
-            <div class="col-md-6">
-              <p>
-                Karibu kwenye kitovu cha elimu yenye mabadiliko, mahali ambapo
-                maarifa yanakutana na maadili! IKHLA imejitolea kujenga
-                mustakabali bora kwa kulea wanafikra makini, kuzalisha viongozi
-                waadilifu, na wanafunzi wa maisha yote. Ingia katika mazingira
-                ya kujifunza yenye uhai yanayochochea hamu ya kujua, ubunifu, na
-                maendeleo ya tabia.
-              </p>
-            </div>
-            <div class="col-md-6">
-              <h3>Misingi Yetu ya Msingi</h3>
-
-              <ul class="list-group">
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center"
-                >
-                  Kujifunza ni safari ya maisha yote.
-                  <span class="badge badge-success badge-pill">.</span>
-                </li>
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center"
-                >
-                  Dumisha uwiano wa akili,mwili, na roho.
-                  <span class="badge badge-success badge-pill">.</span>
-                </li>
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center"
-                >
-                  Ushirikishwaji ndio nguvu yetu. Daima jitahidi kuwa bora
-                  zaidi.
-                  <span class="badge badge-success badge-pill">.</span>
-                </li>
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center"
-                >
-                  Fanya dunia iwe mahali bora pa kuishi.
-                  <span class="badge badge-success badge-pill">.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <div id="sehemu">
-          <section class="map" id="sehemu">
-            <div class="container">
-              <section class="map">
-                <h2>Our Location</h2>
-                <div class="card">
-                  <div class="card-body">
-                    <div id="map" style="height: 400px"></div>
-                  </div>
+    <!-- About IKHLA and Organization Structure Section -->
+    <!-- About IKHLA Section -->
+    <section class="ftco-section bg-white" id="kuhusu">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-12 text-center">
+                    <h3 class="mb-4" style="font-size: 2rem;">Kuhusu IKHLA</h3>
                 </div>
-              </section>
+                <div class="col-md-10 mx-auto">
+                    <p style="font-size: 1.2rem;">
+                        Karibu kwenye kitovu cha elimu yenye mabadiliko, mahali ambapo
+                        maarifa yanakutana na maadili! IKHLA imejitolea kujenga
+                        mustakabali bora kwa kulea wanafikra makini, kuzalisha viongozi
+                        waadilifu, na wanafunzi wa maisha yote. Ingia katika mazingira
+                        ya kujifunza yenye uhai yanayochochea hamu ya kujua, ubunifu, na
+                        maendeleo ya tabia.
+                    </p>
+                    <h4 style="font-size: 1.4rem; font-family: 'Work Sans', sans-serif; color: #333; margin-top: 30px;">Dira Yetu</h4>
+                    <p style="font-size: 1.2rem; font-family: 'Overpass', sans-serif;">
+                        Kua kwa maarifa! Kuwa kiongozi imara mwenye moyo mwema.
+                    </p>
+                    <h4 style="font-size: 1.4rem; font-family: 'Work Sans', sans-serif; color: #333; margin-top: 30px;">Kwa Nini IKHLA?</h4>
+                    <p style="font-size: 1.2rem; font-family: 'Overpass', sans-serif;">
+                        Tumedhamiria kukutanisha maarifa yanakutana na maadili kwa mustakbali mwema wa jamii.
+                    </p>
+                    <h4 style="font-size: 1.4rem; font-family: 'Work Sans', sans-serif; color: #333; margin-top: 30px;">Msingi Wetu</h4>
+                    <p style="font-size: 1.2rem; font-family: 'Overpass', sans-serif;">
+                        Dumisha uwiano wa akili, mwili, na roho.
+                    </p>
+                </div>
             </div>
-          </section>
         </div>
-      </div>
     </section>
+    
+  
+  <!-- Organization Structure Section -->
+    <section class="ftco-section bg-light">
+        <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-12 text-center">
+            <h3 class="mb-4" style="font-size: 2rem;">Muundo wa Taasisi</h3>
+            <p class="mb-4" style="font-size: 1.2rem;">
+                Muundo wetu wa taasisi umeundwa kuhakikisha utendaji bora 
+                na uwazi wa majukumu kwa kila idara.
+            </p>
+            </div>
+            <div class="col-md-10 mx-auto">
+            <ul style="font-size: 1.1rem;">
+                <li><strong>Bodi ya Wadhamini</strong> – Husimamia mwelekeo wa kimkakati.</li>
+                <li><strong>Uongozi wa Utendaji</strong> – Unahusika na usimamizi wa kila siku.</li>
+                <li><strong>Vitengo vya Programu</strong> – Vinatoa mafunzo, tafiti na huduma za kijamii.</li>
+                <li><strong>Washirika wa Maendeleo</strong> – Hutoa msaada wa kifedha na kiufundi.</li>
+            </ul>
+            </div>
+            <div class="col-md-10 mx-auto text-center mt-4">
+            <img src="images_ukuem/org-structure.png" alt="Organization Structure" class="img-fluid rounded shadow-sm mb-3" />
+            <p style="font-size: 1.1rem;">
+                Muundo huu unaonyesha uhusiano wa kiutawala kati ya Bodi ya Wadhamini, 
+                Uongozi wa Taasisi, Idara mbalimbali, na vitengo vya utekelezaji wa 
+                miradi ya kielimu na kijamii.
+            </p>
+            </div>
+        </div>
+        </div>
+    </section>
+  
+  <!-- Map Section -->
+    <section class="ftco-section bg-light" id="sehemu">
+        <div class="container">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-12 text-center">
+            <h2 class="mb-4"vstyle="font-size: 2rem;">Our Location</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+            <div id="map" style="height: 400px;"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+  
 
     <footer class="ftco-footer ftco-section img">
       <div class="overlay"></div>
@@ -213,22 +264,22 @@
                 maarifa yanakutana na maadili kwa mustakbali mwema wa jamii..
               </p>
               <ul class="ftco-footer-social list-unstyled mt-4">
-                <li class="ftco-animate">
+                <li>
                   <a href="https://x.com/IkhlaInfo" target="_blank" rel="noopener noreferrer">
                     <span class="fab fa-x-twitter"></span>
                   </a>
                 </li>
-                <li class="ftco-animate">
+                <li>
                   <a href="https://www.tiktok.com/@ikhla.info" target="_blank" rel="noopener noreferrer">
                     <span class="fab fa-tiktok"></span>
                   </a>
                 </li>
-                <li class="ftco-animate">
+                <li>
                   <a href="https://www.youtube.com/@IKHLA.Insights" target="_blank" rel="noopener noreferrer">
                     <span class="fab fa-youtube"></span>
                   </a>
                 </li>
-                <li class="ftco-animate">
+                <li>
                   <a href="https://www.linkedin.com/in/ikhla/" target="_blank" rel="noopener noreferrer">
                     <span class="fab fa-linkedin-in"></span>
                   </a>
@@ -330,6 +381,33 @@
 
     <script src="js/main.js"></script>
 
+      
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        let slideInterval = setInterval(nextSlide, 9000);
+    
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+        }
+    
+        function changeSlide(direction) {
+        clearInterval(slideInterval);
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        showSlide(currentSlide);
+        slideInterval = setInterval(nextSlide, 9000);
+        }
+    </script>
+
+     
     <script>
       // Initialize the map
       var map = L.map("map").setView([-5.1667, 39.7833], 9);
@@ -347,3 +425,10 @@
     </script>
   </body>
 </html>
+
+
+<!-- Hero Section with Sliding Images and Text Overlay -->
+
+  
+  
+  
