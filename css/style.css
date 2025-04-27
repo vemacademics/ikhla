@@ -7303,7 +7303,9 @@ h1, h2, h3, h4, h5,
   color: #f86f2d !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
+  /*  */
+  /* background: transparent !important; */
+  background: #fff !important;
   position: absolute;
   left: 0;
   right: 0;
@@ -7325,11 +7327,17 @@ h1, h2, h3, h4, h5,
     padding-bottom: .9rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: rgba(255, 255, 255, 0.8);
+    /* color: rgba(255, 255, 255, 0.8); */
+    color: #000; 
     font-weight: 400;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #fff; }
+      /* changes */
+      color: #000 !important; }
+      /* Keep active item (like Nyumbani) orange */
+    .ftco-navbar-light .navbar-nav > .nav-item.active > a {
+      color: #f86f2d !important;
+    }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
     border: none;
     background: #fff;
@@ -7442,6 +7450,9 @@ h1, h2, h3, h4, h5,
       padding-top: 0.9rem !important;
       padding-bottom: 0.9rem !important;
       color: #000 !important; }
+      .ftco-navbar-light.scrolled .nav-link:hover {
+        color: #000 !important;
+    }
       .ftco-navbar-light.scrolled .nav-link.active {
         color: #f86f2d !important; }
     .ftco-navbar-light.scrolled.awake {
@@ -9160,3 +9171,54 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+/* Keep navbar background white always */
+.ftco-navbar-light,
+.ftco-navbar-light.scrolled,
+.ftco-navbar-light.awake,
+.ftco-navbar-light.scrolled.awake {
+    background-color: #fff !important;
+    position: fixed; /* Optional: keep it at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: soft shadow */
+}
+
+/* Navbar links should be black */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    color: #000 !important;
+}
+
+/* Active link should be orange */
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
+    color: orange !important;
+    font-weight: 600;
+}
+
+/* Force toggler icon to always be black */
+.navbar-toggler .oi {
+  color: #000 !important;
+}
+/* Force the navbar toggler to always be black */
+.navbar-toggler,
+.ftco-navbar-light .navbar-toggler,
+.ftco-navbar-light.scrolled .navbar-toggler {
+    color: #000 !important;
+    border-color: #000 !important;
+}
+/* Hover effect for nav items */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff !important; /* You can change this to your preferred color */
+    transition: color 0.3s ease;
+}
+
+/* Active nav item (manually or via JS) */
+.navbar-nav .nav-item .nav-link.active {
+    color: #007bff !important;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
